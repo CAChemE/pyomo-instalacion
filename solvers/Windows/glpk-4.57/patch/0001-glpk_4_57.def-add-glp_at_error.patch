@@ -1,0 +1,42 @@
+From ca42a17f80e229fd1a28c1b8c9847657d6678579 Mon Sep 17 00:00:00 2001
+From: Heinrich Schuchardt <xypron.glpk@gmx.de>
+Date: Sun, 8 Nov 2015 23:02:25 +0100
+Subject: [PATCH] glpk_4_57.def: add glp_at_error
+
+glp_at_error is a new function introduced in GLPK 4.57.
+All functions defined in glpk.h have to appear in glpk_4_57.def
+to allow building GLPK for Java and GLPK for C#/CLI.
+
+Signed-off-by: Heinrich Schuchardt <xypron.glpk@gmx.de>
+---
+ w32/glpk_4_57.def |    1 +
+ w64/glpk_4_57.def |    1 +
+ 2 files changed, 2 insertions(+)
+
+diff --git a/w32/glpk_4_57.def b/w32/glpk_4_57.def
+index 6107696..163a146 100644
+--- a/w32/glpk_4_57.def
++++ b/w32/glpk_4_57.def
+@@ -2,6 +2,7 @@ LIBRARY glpk_4_57
+ VERSION 4.57
+ DESCRIPTION "GNU Linear Programming Kit"
+ EXPORTS
++glp_at_error
+ glp_create_prob
+ glp_set_prob_name
+ glp_set_obj_name
+diff --git a/w64/glpk_4_57.def b/w64/glpk_4_57.def
+index 6107696..163a146 100644
+--- a/w64/glpk_4_57.def
++++ b/w64/glpk_4_57.def
+@@ -2,6 +2,7 @@ LIBRARY glpk_4_57
+ VERSION 4.57
+ DESCRIPTION "GNU Linear Programming Kit"
+ EXPORTS
++glp_at_error
+ glp_create_prob
+ glp_set_prob_name
+ glp_set_obj_name
+-- 
+1.7.10.4
+

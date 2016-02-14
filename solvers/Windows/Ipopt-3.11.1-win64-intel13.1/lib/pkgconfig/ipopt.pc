@@ -1,0 +1,12 @@
+prefix=/home/distrib32/stefan/Ipopt-3.11.1/build64
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/coin
+
+Name: IPOPT
+Description: Interior Point Optimizer
+URL: https://projects.coin-or.org/Ipopt
+Version: 3.11.1
+Libs: -L${libdir} -lipopt mkl_intel_lp64.lib mkl_sequential.lib mkl_core.lib mkl_intel_lp64.lib mkl_sequential.lib mkl_core.lib 
+Cflags: -I${includedir}
+Requires: coinmumps 
