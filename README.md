@@ -92,7 +92,7 @@ Para información más detallada recomendamos leer la
 Lo primero que vamos a hacer es instalar algunos extras de forma similar a
 como instalamos pyomo. Abrimos una ventana de comandos (cmd.exe) o terminal:
 
-    pip install pyomo.extras
+    `pip install pyomo.extras`
 
 * __2b. Gurobi__
 [Gurobi](https://www.gurobi.com/index) es un solver comercial que resuelve
@@ -122,9 +122,11 @@ escribir lo siguiente en la ventana de comandos estando conectado en la red de t
 permite resolver problemas tipo LP y MIP. 
 
 Para instalar GLPK en Windows ejecuta el siguiente comando:
+
     conda install -c https://conda.anaconda.org/snorfalorpagus glpk
 
 Si estás en Linux o Mac utiliza este otro:
+
     conda install -c https://conda.anaconda.org/jjhelmus glpk
     
 Otro solver opcional libre y gratuito es
@@ -145,6 +147,7 @@ estando en la ruta donde se encuentra el archivo transport.py
 
 Si has seguido los pasos correctamente, se habrá generado una archivo `results.yml`
 con la solución de tu problema que puedes abrir con cualquier editor de texto.
+
 
 ### Errores de instalación
 Pyomo hace uso de multitu de paquetes, en ocasiones es probable que durante
