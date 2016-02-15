@@ -21,7 +21,7 @@ Nota: Fíjate que vamos a utilizar la versión de Python 3.5.1.
 Si tienes instalada cualquier otra versión necesitas crear un entorno con conda. 
 Para ello escribe una nueva ventana de comandos:
 
-    conda create -n pyomo35 python=3.5 jupyter numpy matplotlib scipy jupyter
+    conda create -n pyomo35 python=3.5 numpy matplotlib scipy jupyter
 
 Siempre que quieras trabajar con pyomo deberás de activar el entorno que has creado con
 el siguientes comando:
