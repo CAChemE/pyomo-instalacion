@@ -4,8 +4,36 @@ Guía traducida de instalación de Pyomo incluyendo solvers y tests.
 
 ## 0. Instalación de Python:
 Lo primero que necesitamos para instalar Pyomo es Python. Nosotros recomendamos
-instalar Anaconda con Python 3.x ([descarga e instrucciones](https://www.continuum.io/downloads)).
+instalar Anaconda con Python 3.5 ([descarga e instrucciones](https://www.continuum.io/downloads)).
 Si lo necesitas, tienes un [vídeo de instalación para Windows 7](https://www.youtube.com/watch?v=x4xegDME5C0&feature=youtu.be&list=PLGBbVX_WvN7as_DnOGcpkSsUyXB1G_wqb).
+
+Para comprobar que tienes la versión de Python correcta, una vez instalado abre una ventana de comandos, escribe `python` dale a enter.
+
+Deberás ver algo como:
+
+```
+Python 3.5.1 |Continuum Analytics, Inc.| (default, Jan 29 2016, 15:01:46) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> _
+```
+
+Nota: Fíjate que vamos a utilizar la versión de Python 3.5.1.
+Si tienes instalada cualquier otra versión necesitas crear un entorno con conda. 
+Simplemente escribe una nueva ventana de comandos:
+
+    conda create -n pyomo35 python=3.5 jupyter numpy matplotlib scipy jupyter
+
+Siempre que quieras trabajar con pyomo deberás de activar el entorno que has creado con
+los siguientes comandos:
+
+Windows:
+
+    activate pyomo35
+
+Linux/Mac:
+
+    source activate pyomo35
+
 
 ## 1. Instalación de Pyomo:
 Para instalar Pyomo sólo debes de escribir lo siguiente en la ventana de comandos
@@ -87,9 +115,17 @@ escribir lo siguiente en la ventana de comandos estando conectado en la red de t
 
 
 
-* __2c. Otros solvers (opcional)__
+* __2c. Otros solvers__
 [GLPK](https://www.gnu.org/software/glpk/) es un solver gratuito y libre que
-permite resolver problemas tipo LP y MIP. Otro solver libre y gratuito es
+permite resolver problemas tipo LP y MIP. 
+
+Para instalar GLPK en Windows ejecuta el siguiente comando:
+    conda install -c https://conda.anaconda.org/snorfalorpagus glpk
+
+Si estás en Linux o Mac utiliza este otro:
+    conda install -c https://conda.anaconda.org/jjhelmus glpk
+    
+Otro solver opcional libre y gratuito es
 [IPOPT](https://projects.coin-or.org/Ipopt) que permite resolver problemas NLP.
 Para instalar estos y otros solvers siempre es necesario descargar sus
 binarios más recientes y añadirlos al PATH de tu sistema operativo.
@@ -101,8 +137,9 @@ Pyomo puede detectar los solvers que tienes disponibles con el siguiente comando
 ## 3. Probando la instalación
 Vamos a resolver el problema de transporte para comprobar que hemos instalado
 Pyomo y sus solvers correctamente. Para ello debemos de escribir el siguiente comando
+estando en la ruta donde se encuentra el archivo transport.py
 
-    pyomo solve --solver=gurobi transport.py
+    pyomo solve --solver=glpk transport.py
 
 Si has seguido los pasos correctamente, se habrá generado una archivo `results.yml`
 con la solución de tu problema que puedes abrir con cualquier editor de texto.
