@@ -7,7 +7,7 @@ Lo primero que necesitamos para instalar Pyomo es Python. Nosotros recomendamos
 instalar Anaconda con Python 3.5 ([descarga e instrucciones](https://www.continuum.io/downloads)).
 Si lo necesitas, tienes un [vídeo de instalación para Windows 7](https://www.youtube.com/watch?v=x4xegDME5C0&feature=youtu.be&list=PLGBbVX_WvN7as_DnOGcpkSsUyXB1G_wqb).
 
-Para comprobar que tienes la versión de Python correcta, una vez instalado abre una ventana de comandos, escribe `python` dale a enter.
+Para comprobar que tienes la versión de Python correcta, una vez instalado abre una ventana de comandos, escribe `python` y dale a enter.
 
 Deberás ver algo como:
 
@@ -19,21 +19,23 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 Nota: Fíjate que vamos a utilizar la versión de Python 3.5.1.
 Si tienes instalada cualquier otra versión necesitas crear un entorno con conda. 
-Simplemente escribe una nueva ventana de comandos:
+Para ello escribe una nueva ventana de comandos:
 
     conda create -n pyomo35 python=3.5 jupyter numpy matplotlib scipy jupyter
 
 Siempre que quieras trabajar con pyomo deberás de activar el entorno que has creado con
-los siguientes comandos:
+el siguientes comando:
 
-Windows:
+* Windows:
 
-    activate pyomo35
+    `activate pyomo35`
 
-Linux/Mac:
+* Linux/Mac:
 
-    source activate pyomo35
+    `source activate pyomo35`
 
+En [este vídeo](https://www.youtube.com/watch?v=cX6l3IzWewc&index=22&list=PLGBbVX_WvN7as_DnOGcpkSsUyXB1G_wqb)
+explicamos con más detalle cómo gestionar una instalación de Python con Anconda/conda. 
 
 ## 1. Instalación de Pyomo:
 Para instalar Pyomo sólo debes de escribir lo siguiente en la ventana de comandos
