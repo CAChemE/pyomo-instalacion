@@ -21,7 +21,7 @@ Nota: Fíjate que vamos a utilizar la versión de Python 3.5.1.
 Si tienes instalada cualquier otra versión necesitas crear un entorno con conda. 
 Para ello escribe una nueva ventana de comandos:
 
-    conda create -n pyomo35 python=3.5 numpy matplotlib scipy jupyter
+    conda create -n pyomo35 python=3.5 numpy matplotlib scipy jupyter ipython
 
 Siempre que quieras trabajar con pyomo deberás de activar el entorno que has creado con
 el siguientes comando:
@@ -41,7 +41,13 @@ explicamos con más detalle cómo gestionar una instalación de Python con Ancon
 Para instalar Pyomo sólo debes de escribir lo siguiente en la ventana de comandos
 (cmd.exe) o terminal (linux o mac)
 
-    pip install Pyomo
+* Windows:
+
+    `conda install -c https://conda.anaconda.org/cachemeorg pyomo`
+
+* Linux/Mac:
+
+    `pip install Pyomo`
 
 Para comprobar que pyomo se ha instalado correctamente, cierra y abre una nueva
 ventana de comandos y escribe:
@@ -92,6 +98,12 @@ Para información más detallada recomendamos leer la
 Lo primero que vamos a hacer es instalar algunos extras de forma similar a
 como instalamos pyomo. Abrimos una ventana de comandos (cmd.exe) o terminal:
 
+* Windows (python 3.5):
+
+    `conda install -c https://conda.anaconda.org/cachemeorg pyomo.extras`
+
+* Linux o Mac:
+
     `pip install pyomo.extras`
 
 * __2b. Gurobi__
@@ -129,10 +141,17 @@ Si estás en Linux o Mac utiliza este otro:
 
     conda install -c https://conda.anaconda.org/jjhelmus glpk
     
-Otro solver opcional libre y gratuito es
+Otro solver libre y gratuito es 
 [IPOPT](https://projects.coin-or.org/Ipopt) que permite resolver problemas NLP.
-Para instalar estos y otros solvers siempre es necesario descargar sus
-binarios más recientes y añadirlos al PATH de tu sistema operativo.
+De nuevo, podemos instalarlo con conda:
+
+* Windows:
+
+`conda install -c https://conda.anaconda.org/juanlu001 ipopt_bin`
+
+* Linux:
+
+`conda install -c https://conda.anaconda.org/cachemeorg ipopt_bin`
 
 Pyomo puede detectar los solvers que tienes disponibles con el siguiente comando:
 
@@ -148,6 +167,11 @@ estando en la ruta donde se encuentra el archivo transport.py
 Si has seguido los pasos correctamente, se habrá generado una archivo `results.yml`
 con la solución de tu problema que puedes abrir con cualquier editor de texto.
 
+De la misma forma, podemos probar el solver IPOPT para un problema no lineal. 
+Recuerda que debes de escribir el siguiente comando
+estando en la ruta donde se encuentra el archivo concrete.py
+
+    pyomo solve --solver=ipopt concrete.py
 
 ### Errores de instalación
 Pyomo hace uso de multitu de paquetes, en ocasiones es probable que durante
