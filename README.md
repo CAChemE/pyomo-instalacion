@@ -209,7 +209,7 @@ error: Microsoft Visual C++ 10.0 is required (Unable to find vcvarsall.bat).
 Puedes instalar Visual Studio Community o Visual Studio 2010 para tratar de solventarlo
 ([Descargar, 6Gb+](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)).
 Te recomendamos crear un entorno con Python 3.5 para este taller, ya que es la
-última versión disponible y en la que hemos comilado pyomo para que funcione sin
+última versión disponible y cona la que hemos compilado pyomo para que funcione sin
 problemas.
 
 * __Error instalando otros solvers__
