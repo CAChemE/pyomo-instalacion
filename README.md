@@ -41,13 +41,7 @@ explicamos con más detalle cómo gestionar una instalación de Python con Ancon
 Para instalar Pyomo sólo debes de escribir lo siguiente en la ventana de comandos
 (cmd.exe) o terminal (linux o mac)
 
-* Windows:
-
     `conda install -channel chachemeorg pyomo`
-
-* Linux/Mac:
-
-    `pip install Pyomo`
 
 Para comprobar que pyomo se ha instalado correctamente, cierra y abre una nueva
 ventana de comandos y escribe:
@@ -98,34 +92,21 @@ Para información más detallada recomendamos leer la
 Lo primero que vamos a hacer es instalar algunos extras de forma similar a
 como instalamos pyomo. Abrimos una ventana de comandos (cmd.exe) o terminal:
 
-* Windows (python 3.5):
-
     `conda install -channel chachemeorg pyomo.extras`
-
-* Linux o Mac:
-
-    `pip install pyomo.extras`
-
 
 * __2c. Solvers libres y gratuitos para problemas tipo LP, MIP y NLP__
 [GLPK](https://www.gnu.org/software/glpk/) es un solver gratuito y libre que
 permite resolver problemas tipo LP y MIP.
 
-Para instalar GLPK en Windows o Linux ejecuta el siguiente comando:
+Para instalar GLPK ejecuta el siguiente comando:
 
     conda install -channel cachemeorg glpk
-
-Si estás en Mac utiliza este otro:
-
-    conda install -c https://conda.anaconda.org/jjhelmus glpk
 
 Otro solver libre y gratuito es
 [IPOPT](https://projects.coin-or.org/Ipopt) que permite resolver problemas NLP.
 De nuevo, podemos instalarlo con conda:
 
-* Windows o Linux:
-
-`conda install -channel chachemeorg ipopt_bin`
+    `conda install -channel chachemeorg ipopt_bin`
 
 * __2c. Gurobi (opcional)__
 [Gurobi](https://www.gurobi.com/index) es un solver comercial que resuelve
@@ -211,7 +192,7 @@ error: Microsoft Visual C++ 10.0 is required (Unable to find vcvarsall.bat).
 Puedes instalar Visual Studio Community o Visual Studio 2010 para tratar de solventarlo
 ([Descargar, 6Gb+](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)).
 Te recomendamos crear un entorno con Python 3.5 para este taller, ya que es la
-última versión disponible y en la que hemos comilado pyomo para que funcione sin
+última versión disponible y en la que hemos compilado pyomo para que funcione sin
 problemas.
 
 * __Error instalando otros solvers__
