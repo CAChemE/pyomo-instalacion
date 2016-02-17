@@ -43,7 +43,7 @@ Para instalar Pyomo sólo debes de escribir lo siguiente en la ventana de comand
 
 * Windows:
 
-    `conda install -channel chachemeorg pyomo`
+    `conda install --channel chachemeorg pyomo`
 
 * Linux/Mac:
 
@@ -100,7 +100,7 @@ como instalamos pyomo. Abrimos una ventana de comandos (cmd.exe) o terminal:
 
 * Windows (python 3.5):
 
-    `conda install -channel chachemeorg pyomo.extras`
+    `conda install --channel chachemeorg pyomo.extras`
 
 * Linux o Mac:
 
@@ -113,11 +113,11 @@ permite resolver problemas tipo LP y MIP.
 
 Para instalar GLPK en Windows o Linux ejecuta el siguiente comando:
 
-    conda install -channel cachemeorg glpk
+    conda install --channel cachemeorg glpk
 
 Si estás en Mac utiliza este otro:
 
-    conda install -c https://conda.anaconda.org/jjhelmus glpk
+    conda install --channel jjhelmus glpk
 
 Otro solver libre y gratuito es
 [IPOPT](https://projects.coin-or.org/Ipopt) que permite resolver problemas NLP.
@@ -125,7 +125,7 @@ De nuevo, podemos instalarlo con conda:
 
 * Windows o Linux:
 
-`conda install -channel chachemeorg ipopt_bin`
+`conda install --channel chachemeorg ipopt_bin`
 
 * __2c. Gurobi (opcional)__
 [Gurobi](https://www.gurobi.com/index) es un solver comercial que resuelve
@@ -135,9 +135,7 @@ una licencia académica sin coste que podemos usar.
 ⋅⋅1. Para descargar e instalar gurobi podemos hacer uso de conda, el gestor de paquetes de
 Anaconda que hemos instalado junto a Python:
 
-    conda config --add channels http://conda.anaconda.org/gurobi
-    conda install gurobi
-
+    conda install --channel Gurobi gurobi
 
 ⋅⋅2.  [Solicita una licencia haciendo uso de tu email
  de la universidad](http://user.gurobi.com/download/licenses/free-academic).
