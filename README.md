@@ -18,7 +18,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
 Nota: Fíjate que vamos a utilizar la versión de Python 3.5.1.
-Si tienes instalada cualquier otra versión necesitas crear un entorno con conda. 
+Si tienes instalada cualquier otra versión necesitas crear un entorno con conda.
 Para ello escribe una nueva ventana de comandos:
 
     conda create -n pyomo35 python=3.5 numpy matplotlib scipy jupyter ipython
@@ -35,7 +35,7 @@ el siguientes comando:
     `source activate pyomo35`
 
 En [este vídeo](https://www.youtube.com/watch?v=cX6l3IzWewc&index=22&list=PLGBbVX_WvN7as_DnOGcpkSsUyXB1G_wqb)
-explicamos con más detalle cómo gestionar una instalación de Python con Anconda/conda. 
+explicamos con más detalle cómo gestionar una instalación de Python con Anconda/conda.
 
 ## 1. Instalación de Pyomo:
 Para instalar Pyomo sólo debes de escribir lo siguiente en la ventana de comandos
@@ -43,7 +43,7 @@ Para instalar Pyomo sólo debes de escribir lo siguiente en la ventana de comand
 
 * Windows:
 
-    `conda install -c https://conda.anaconda.org/cachemeorg pyomo`
+    `conda install -channel chachemeorg pyomo`
 
 * Linux/Mac:
 
@@ -100,16 +100,37 @@ como instalamos pyomo. Abrimos una ventana de comandos (cmd.exe) o terminal:
 
 * Windows (python 3.5):
 
-    `conda install -c https://conda.anaconda.org/cachemeorg pyomo.extras`
+    `conda install -channel chachemeorg pyomo.extras`
 
 * Linux o Mac:
 
     `pip install pyomo.extras`
 
-* __2b. Gurobi__
+
+* __2c. Solvers libres y gratuitos para problemas tipo LP, MIP y NLP__
+[GLPK](https://www.gnu.org/software/glpk/) es un solver gratuito y libre que
+permite resolver problemas tipo LP y MIP.
+
+Para instalar GLPK en Windows o Linux ejecuta el siguiente comando:
+
+    conda install -channel cachemeorg glpk
+
+Si estás en Mac utiliza este otro:
+
+    conda install -c https://conda.anaconda.org/jjhelmus glpk
+
+Otro solver libre y gratuito es
+[IPOPT](https://projects.coin-or.org/Ipopt) que permite resolver problemas NLP.
+De nuevo, podemos instalarlo con conda:
+
+* Windows o Linux:
+
+`conda install -channel chachemeorg ipopt_bin`
+
+* __2c. Gurobi (opcional)__
 [Gurobi](https://www.gurobi.com/index) es un solver comercial que resuelve
 problemas tipo LP, QP, MILP y MIQP. Sin embargo, Gurobi ofrece
-una licencia académica sin coste que usaremos.
+una licencia académica sin coste que podemos usar.
 
 ⋅⋅1. Para descargar e instalar gurobi podemos hacer uso de conda, el gestor de paquetes de
 Anaconda que hemos instalado junto a Python:
@@ -126,33 +147,6 @@ Anaconda que hemos instalado junto a Python:
 escribir lo siguiente en la ventana de comandos estando conectado en la red de tu universidad.
 
     grbgetkey xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
-
-
-
-* __2c. Otros solvers__
-[GLPK](https://www.gnu.org/software/glpk/) es un solver gratuito y libre que
-permite resolver problemas tipo LP y MIP. 
-
-Para instalar GLPK en Windows ejecuta el siguiente comando:
-
-    conda install -c https://conda.anaconda.org/snorfalorpagus glpk
-
-Si estás en Linux o Mac utiliza este otro:
-
-    conda install -c https://conda.anaconda.org/jjhelmus glpk
-    
-Otro solver libre y gratuito es 
-[IPOPT](https://projects.coin-or.org/Ipopt) que permite resolver problemas NLP.
-De nuevo, podemos instalarlo con conda:
-
-* Windows:
-
-`conda install -c https://conda.anaconda.org/juanlu001 ipopt_bin`
-
-* Linux:
-
-`conda install -c https://conda.anaconda.org/cachemeorg ipopt_bin`
-
 Pyomo puede detectar los solvers que tienes disponibles con el siguiente comando:
 
     pyomo help -s
@@ -167,7 +161,7 @@ estando en la ruta donde se encuentra el archivo transport.py
 Si has seguido los pasos correctamente, se habrá generado una archivo `results.yml`
 con la solución de tu problema que puedes abrir con cualquier editor de texto.
 
-De la misma forma, podemos probar el solver IPOPT para un problema no lineal. 
+De la misma forma, podemos probar el solver IPOPT para un problema no lineal.
 Recuerda que debes de escribir el siguiente comando
 estando en la ruta donde se encuentra el archivo concrete.py
 
@@ -192,30 +186,38 @@ Para asegurarnos de que has instalado bien Python, abre una ventana de
 comandos (cmd.exe) o una terminal (linux o mac) y escribe lo siguiente:
     python
 
-Deberías de ver tu versión de Python como resultado:
- de haberse activado Python con información de la versión y distribución que estás usando:
+Deberías de ver tu versión de Python como resultado la versión y distribución que estás usando:
  ```terminal
  Python 3.4.4 |Continuum Analytics, Inc.| (default, Jan 29 2016, 15:20:20) [MSC v
 .1600 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
 >>> _
 ```
+En este ejemplo hemos puesto la versión anterior que probablemente
+te dará problemas de instalación.
+Recuerda que si no tienes Python 3.5.x instalado en tu ordenador puedes usa de conda
+tal y como se describió al inicio de este documento.
 
 * __Error instalando pyomo.extras__
 
 Si has obtenido un error en la ventana de comandos cuando instalabas pyomo.extras
-no te preocupes. Estos paquetes no son imprescindibles para resolver
-los problemas del curso. Por ejemplo, si recibes el error en Windows:
+mediante `conda` o `pip` no te preocupes. Estos paquetes no son imprescindibles para resolver
+los problemas del curso. Por ejemplo, si recibes el error en Windows con Python 3.4:
 
 ```
 error: Microsoft Visual C++ 10.0 is required (Unable to find vcvarsall.bat).
 ```
 
-Puedes instalar Visual Studio Community para tratar de solventarlo
+Puedes instalar Visual Studio Community o Visual Studio 2010 para tratar de solventarlo
 ([Descargar, 6Gb+](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)).
+Te recomendamos crear un entorno con Python 3.5 para este taller, ya que es la
+última versión disponible y en la que hemos comilado pyomo para que funcione sin
+problemas.
 
-* __Error instalando solvers__
+* __Error instalando otros solvers__
 Para instalar cualquier solver siempre es necesario descargar sus archivos
 binarios más recientes para tu sistema operativo y añadirlos al PATH.
 Si no entiendes muy bien qué es esto, puedes preguntarnos y/o leer una [explicación
 del PATH para Windows](http://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them).
+Por ejemplo, tanto AMPL como GAMS contienen todos los binarios de los solvers
+más famosos (muchos de ellos con límite de varibles a la hora de resolver).
