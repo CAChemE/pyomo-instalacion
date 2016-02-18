@@ -39,7 +39,7 @@ explicamos con más detalle cómo gestionar una instalación de Python con Ancon
 
 ## 1. Instalación de Pyomo:
 Para instalar Pyomo sólo debes de escribir lo siguiente en la ventana de comandos
-(cmd.exe) o terminal (linux o mac)
+(cmd.exe) o terminal (linux o mac). Recuerda que debes de tener el entorno activado si lo tuviste que crear en el paso anterior .
 
 * Windows:
 
@@ -219,3 +219,6 @@ Si no entiendes muy bien qué es esto, puedes preguntarnos y/o leer una [explica
 del PATH para Windows](http://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them).
 Por ejemplo, tanto AMPL como GAMS contienen todos los binarios de los solvers
 más famosos (muchos de ellos con límite de varibles a la hora de resolver).
+
+*__`conda` o `pyomo doesn't exist`__
+Para hacer uso de conda, debes tener instalado Anaconda o su versión ligar miniconda. Por otro lado, rescuerda que si tuvista que crear un entorno con la versión más reciente de Python, debes de activarlo tal y como se indica en el primer paso de este tutorial.
