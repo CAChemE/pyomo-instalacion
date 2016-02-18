@@ -94,7 +94,7 @@ Para información más detallada recomendamos leer la
 Lo primero que vamos a hacer es instalar algunos extras de forma similar a
 como instalamos pyomo. Abrimos una ventana de comandos (cmd.exe) o terminal:
 
-    conda install pyomo.extras -c chachemeorg
+    `conda install pyomo.extras -c chachemeorg`
 
 * __2c. Solvers libres y gratuitos para problemas tipo LP, MIP y NLP__
 [GLPK](https://www.gnu.org/software/glpk/) es un solver gratuito y libre que
