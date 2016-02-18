@@ -28,32 +28,28 @@ el siguientes comando:
 
 * Windows:
 
-    `activate pyomo35`
+    activate pyomo35
 
 * Linux/Mac:
 
-    `source activate pyomo35`
+    source activate pyomo35
 
 En [este vídeo](https://www.youtube.com/watch?v=cX6l3IzWewc&index=22&list=PLGBbVX_WvN7as_DnOGcpkSsUyXB1G_wqb)
 explicamos con más detalle cómo gestionar una instalación de Python con Anconda/conda.
 
 ## 1. Instalación de Pyomo:
 Para instalar Pyomo sólo debes de escribir lo siguiente en la ventana de comandos
-(cmd.exe) o terminal (linux o mac). Recuerda que debes de tener el entorno activado si lo tuviste que crear en el paso anterior .
+(cmd.exe) o terminal (linux o mac). Recuerda que debes de tener el entorno activado si lo tuviste que crear en el paso anterior.
 
-* Windows:
-
-    `conda install -c chachemeorg pyomo`
-
-* Linux/Mac:
-
-    `pip install Pyomo`
+    conda install pyomo -c chachemeorg
 
 Para comprobar que pyomo se ha instalado correctamente, cierra y abre una nueva
 ventana de comandos y escribe:
 
     pyomo
+
 Deberás de ver un mensaje similar a este:
+
 ```terminal
 C:\>pyomo
 usage: pyomo.exe [-h] [--version]
@@ -98,14 +94,7 @@ Para información más detallada recomendamos leer la
 Lo primero que vamos a hacer es instalar algunos extras de forma similar a
 como instalamos pyomo. Abrimos una ventana de comandos (cmd.exe) o terminal:
 
-* Windows (python 3.5):
-
-    `conda install -c chachemeorg pyomo.extras`
-
-* Linux o Mac:
-
-    `pip install pyomo.extras`
-
+    conda install pyomo.extras -c chachemeorg
 
 * __2c. Solvers libres y gratuitos para problemas tipo LP, MIP y NLP__
 [GLPK](https://www.gnu.org/software/glpk/) es un solver gratuito y libre que
@@ -113,19 +102,13 @@ permite resolver problemas tipo LP y MIP.
 
 Para instalar GLPK en Windows o Linux ejecuta el siguiente comando:
 
-    conda install -c cachemeorg glpk
-
-Si estás en Mac utiliza este otro:
-
-    conda install -c jjhelmus glpk
+    conda install glpk -c cachemeorg
 
 Otro solver libre y gratuito es
 [IPOPT](https://projects.coin-or.org/Ipopt) que permite resolver problemas NLP.
 De nuevo, podemos instalarlo con conda:
 
-* Windows o Linux:
-
-`conda install -c chachemeorg ipopt_bin`
+    conda install ipopt_bin -c chachemeorg
 
 * __2c. Gurobi (opcional)__
 [Gurobi](https://www.gurobi.com/index) es un solver comercial que resuelve
@@ -135,7 +118,7 @@ una licencia académica sin coste que podemos usar.
 ⋅⋅1. Para descargar e instalar gurobi podemos hacer uso de conda, el gestor de paquetes de
 Anaconda que hemos instalado junto a Python:
 
-    conda install -c Gurobi gurobi
+    conda install gurobi -c Gurobi
 
 ⋅⋅2.  [Solicita una licencia haciendo uso de tu email
  de la universidad](http://user.gurobi.com/download/licenses/free-academic).
@@ -175,22 +158,25 @@ Si has tenido problemas durante la instalación, vamos a asegurarnos de que
 disponemos de las últimas versiones de Python. Para ello, abrimos una ventana
 de comandos (cmd.exe) o una terminal (linux o mac) y escribimos lo siguiente:
 
-    conda udpdate conda
+    conda update conda
     conda update -all
 
 * __Errores con Python:__
 
 Para asegurarnos de que has instalado bien Python, abre una ventana de
 comandos (cmd.exe) o una terminal (linux o mac) y escribe lo siguiente:
+
     python
 
 Deberías de ver tu versión de Python como resultado la versión y distribución que estás usando:
+
  ```terminal
  Python 3.4.4 |Continuum Analytics, Inc.| (default, Jan 29 2016, 15:20:20) [MSC v
 .1600 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
 >>> _
 ```
+
 En este ejemplo hemos puesto la versión anterior que probablemente
 te dará problemas de instalación.
 Recuerda que si no tienes Python 3.5.x instalado en tu ordenador puedes usa de conda
@@ -221,4 +207,4 @@ Por ejemplo, tanto AMPL como GAMS contienen todos los binarios de los solvers
 más famosos (muchos de ellos con límite de varibles a la hora de resolver).
 
 *__`conda` o `pyomo doesn't exist`__
-Para hacer uso de conda, debes tener instalado Anaconda o su versión ligar miniconda. Por otro lado, rescuerda que si tuvista que crear un entorno con la versión más reciente de Python, debes de activarlo tal y como se indica en el primer paso de este tutorial.
+Para hacer uso de conda, debes tener instalado Anaconda o su versión ligar miniconda. Por otro lado, recuerda que si tuviste que crear un entorno con la versión más reciente de Python, debes de activarlo tal y como se indica en el primer paso de este tutorial.
