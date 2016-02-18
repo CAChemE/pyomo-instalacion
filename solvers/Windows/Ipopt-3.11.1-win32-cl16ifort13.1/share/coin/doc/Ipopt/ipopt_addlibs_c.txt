@@ -1,1 +1,0 @@
--libpath:/home/distrib32/stefan/Ipopt-3.11.1/build/lib libipopt.lib   -libpath:/home/distrib32/stefan/Ipopt-3.11.1/build/lib libcoinmumps.lib mkl_intel_c.lib mkl_sequential.lib mkl_core.lib   mkl_intel_c.lib mkl_sequential.lib mkl_core.lib mkl_intel_c.lib mkl_sequential.lib mkl_core.lib  
