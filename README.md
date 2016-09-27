@@ -41,7 +41,7 @@ explicamos con más detalle cómo gestionar una instalación de Python con Ancon
 Para instalar Pyomo sólo debes de escribir lo siguiente en la ventana de comandos
 (cmd.exe) o terminal (linux o mac). Recuerda que debes de tener el entorno activado si lo tuviste que crear en el paso anterior.
 
-    conda install pyomo --channel cachemeorg
+    conda install pyomo -c conda-forge
 
 Para comprobar que pyomo se ha instalado correctamente, cierra y abre una nueva
 ventana de comandos y escribe:
@@ -102,7 +102,7 @@ permite resolver problemas tipo LP y MIP.
 
 Para instalar GLPK en Windows o Linux ejecuta el siguiente comando:
 
-    conda install glpk --channel cachemeorg
+    conda install glpk -c conda-forge
 
 Otro solver libre y gratuito es
 [IPOPT](https://projects.coin-or.org/Ipopt) que permite resolver problemas NLP.
