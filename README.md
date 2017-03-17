@@ -2,6 +2,8 @@
 
 Guía traducida de instalación de Pyomo incluyendo solvers y tests.
 
+Si quieres aprender a utilizar Pyomo, dale un vistazo a su [documentación](http://www.pyomo.org/documentation) o al [material del curso de introducción](https://github.com/CAChemE/Taller-Optimizacion-Python-Pyomo).
+
 ## 0. Instalación de Python:
 Lo primero que necesitamos para instalar Pyomo es Python. Nosotros recomendamos
 instalar Anaconda con Python 3.5 ([descarga e instrucciones](https://www.continuum.io/downloads)).
