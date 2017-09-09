@@ -1,4 +1,4 @@
-# Guía de instalación de Pyomo (desactualizda)
+# Guía de instalación de Pyomo
 
 Guía traducida de instalación de Pyomo incluyendo solvers y tests.
 
@@ -6,7 +6,7 @@ Si quieres aprender a utilizar Pyomo, dale un vistazo a su [documentación](http
 
 ## 0. Instalación de Python:
 Lo primero que necesitamos para instalar Pyomo es Python. Nosotros recomendamos
-instalar Anaconda con Python 3.5 ([descarga e instrucciones](https://www.continuum.io/downloads)).
+instalar [miniconda](https://conda.io/miniconda.html) con Python 3.6.
 Si lo necesitas, tienes un [vídeo de instalación para Windows 7](https://www.youtube.com/watch?v=x4xegDME5C0&feature=youtu.be&list=PLGBbVX_WvN7as_DnOGcpkSsUyXB1G_wqb).
 
 Para comprobar que tienes la versión de Python correcta, una vez instalado abre una ventana de comandos, escribe `python` y dale a enter.
@@ -14,39 +14,41 @@ Para comprobar que tienes la versión de Python correcta, una vez instalado abre
 Deberás ver algo como:
 
 ```
-Python 3.5.1 |Continuum Analytics, Inc.| (default, Jan 29 2016, 15:01:46) [MSC v.1900 64 bit (AMD64)] on win32
+Python 3.6.2 |Continuum Analytics, Inc.| (default, Jul 20 2017, 12:30:02) [MSC v.1900 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
 >>> _
 ```
 
-Nota: Fíjate que vamos a utilizar la versión de Python 3.5.1.
+Nota: Fíjate que vamos a utilizar la versión de Python 3.6.2
 Si tienes instalada cualquier otra versión necesitas crear un entorno con conda.
 Para ello escribe una nueva ventana de comandos:
 
-    conda create -n pyomo35 python=3.5 numpy matplotlib scipy jupyter ipython
+    conda create -n pyomo36 python=3.6 numpy matplotlib scipy jupyter ipython
 
 Siempre que quieras trabajar con pyomo deberás de activar el entorno que has creado con
 el siguientes comando:
 
 * Windows:
 
-    activate pyomo35
+    activate pyomo36
 
 * Linux/Mac:
 
-    source activate pyomo35
+    source activate pyomo36
+    
+El paso de activar el entorno creado especificamente para pyomo será omitido en el resto del tutorial. Recuerda activarlo siempre
 
 En [este vídeo](https://www.youtube.com/watch?v=cX6l3IzWewc&index=22&list=PLGBbVX_WvN7as_DnOGcpkSsUyXB1G_wqb)
 explicamos con más detalle cómo gestionar una instalación de Python con Anconda/conda.
 
 ## 1. Instalación de Pyomo:
-Para instalar Pyomo sólo debes de escribir lo siguiente en la ventana de comandos
+Para instalar Pyomo sólo debes activar tu entorno y escribir lo siguiente en la ventana de comandos
 (cmd.exe) o terminal (linux o mac). Recuerda que debes de tener el entorno activado si lo tuviste que crear en el paso anterior.
 
     conda install pyomo -c conda-forge
 
 Para comprobar que pyomo se ha instalado correctamente, cierra y abre una nueva
-ventana de comandos y escribe:
+ventana de comandos, activa el entorno y escribe:
 
     pyomo
 
@@ -96,7 +98,7 @@ Para información más detallada recomendamos leer la
 Lo primero que vamos a hacer es instalar algunos extras de forma similar a
 como instalamos pyomo. Abrimos una ventana de comandos (cmd.exe) o terminal:
 
-    `conda install pyomo.extras --channel cachemeorg`
+    `conda install pyomo.extras --channel conda-forge`
 
 * __2c. Solvers libres y gratuitos para problemas tipo LP, MIP y NLP__
 [GLPK](https://www.gnu.org/software/glpk/) es un solver gratuito y libre que
@@ -110,7 +112,7 @@ Otro solver libre y gratuito es
 [IPOPT](https://projects.coin-or.org/Ipopt) que permite resolver problemas NLP.
 De nuevo, podemos instalarlo con conda:
 
-    conda install ipopt_bin --channel cachemeorg
+    conda install ipopt_bin --channel conda-forge
 
 * __2c. Gurobi (opcional)__
 [Gurobi](https://www.gurobi.com/index) es un solver comercial que resuelve
