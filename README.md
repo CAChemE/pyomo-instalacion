@@ -112,7 +112,7 @@ Otro solver libre y gratuito es
 [IPOPT](https://projects.coin-or.org/Ipopt) que permite resolver problemas NLP.
 De nuevo, podemos instalarlo con conda:
 
-    conda install ipopt_bin --channel conda-forge
+    conda install ipopt --channel conda-forge
 
 * __2c. Gurobi (opcional)__
 [Gurobi](https://www.gurobi.com/index) es un solver comercial que resuelve
