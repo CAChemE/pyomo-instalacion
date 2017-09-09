@@ -1,4 +1,4 @@
-# Guía de instalación de Pyomo
+# Guía de instalación de Pyomo (desactualizda)
 
 Guía traducida de instalación de Pyomo incluyendo solvers y tests.
 
